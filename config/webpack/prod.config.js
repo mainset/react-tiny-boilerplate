@@ -1,6 +1,6 @@
 /* eslint-disable */
 var merge = require('webpack-merge');
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var TerserPlugin = require('terser-webpack-plugin');
 var path = require('path');
 
 var common = require('./common.config.js');
@@ -14,7 +14,7 @@ module.exports = merge(common, {
   },
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
+      new TerserPlugin({
         cache: true,
         parallel: true,
         sourceMap: true,

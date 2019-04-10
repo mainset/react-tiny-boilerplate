@@ -17,6 +17,7 @@ module.exports = {
   ],
   output: {
     path: path.join(rootPath, 'public'),
+    publicPath: '/',
   },
   module: {
     rules: [
