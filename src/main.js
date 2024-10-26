@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOMClient from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 
@@ -19,4 +19,6 @@ const MAIN = (
   </Provider>
 );
 
-ReactDOM.render(MAIN, document.getElementById('react-ethereal-boilerplate'));
+const targetContainer = document.getElementById('react-ethereal-boilerplate');
+
+ReactDOMClient.createRoot(targetContainer).render(MAIN);
